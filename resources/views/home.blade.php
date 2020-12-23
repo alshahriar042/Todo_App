@@ -17,7 +17,7 @@
                      You Don't have any task yet!!
                      May be <a href="" >Create</a> one?
                         @else
-        <table class="table">
+<table class="table">
             <thead>
             <tr>
                 <th scope="col">Name</th>

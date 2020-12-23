@@ -26,3 +26,10 @@ Route::get('/secured', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::prefix('/tasks')->group(function (){
+    Route::get('/create', [App\Http\Controllers\TaskController::class, 'create'])
+        ->name('task.create');
+    Route::post('/create', [App\Http\Controllers\TaskController::class, 'save'])
+        ->name('task.save');
+
+});
